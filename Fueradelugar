@@ -1,0 +1,2435 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuera de lugar | Gorras y Camisetas de Selecciones en Bogotá</title>
+  <meta name="description" content="Camisetas y gorras de selecciones de fútbol en Bogotá: Colombia, Argentina, Brasil, España, México, Francia y Alemania. Envío gratis en Bogotá, compra segura y cambios de talla.">
+  <meta name="theme-color" content="#003893">
+
+  <!-- Open Graph (cómo se ve el link al compartirlo en WhatsApp, Facebook, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Fuera de lugar">
+  <meta property="og:title" content="Fuera de lugar | Gorras y Camisetas de Selecciones">
+  <meta property="og:description" content="Vístete con los colores de tu selección. Camisetas y gorras para hinchas en Bogotá y toda Colombia.">
+  <!-- EDITA: cuando tengas dominio e imagen, quita los comentarios de estas dos líneas -->
+  <!-- <meta property="og:url" content="https://www.tu-dominio.com/"> -->
+  <!-- <meta property="og:image" content="https://www.tu-dominio.com/img/compartir.jpg"> -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+/* ==========================================================
+   Fuera de lugar – Gorras y Camisetas de Selecciones
+   Estilos (mobile-first)
+   ========================================================== */
+
+/* ---------- VARIABLES ---------- */
+:root {
+  --amarillo: #FCD116;
+  --amarillo-oscuro: #E5BC00;
+  --amarillo-suave: #FFF6CC;
+  --azul: #003893;
+  --azul-oscuro: #002766;
+  --azul-claro: #E6EDF8;
+  --rojo: #CE1126;
+  --rojo-oscuro: #A50D1E;
+  --fondo: #F4F6FB;
+  --blanco: #FFFFFF;
+  --texto: #1D2433;
+  --texto-suave: #4A5368;
+  --borde: #DCE2EE;
+
+  --fuente-titulos: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  --fuente-texto: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --radio: 14px;
+  --radio-sm: 8px;
+  --sombra: 0 6px 20px rgba(29, 36, 51, .08);
+  --sombra-fuerte: 0 14px 34px rgba(0, 56, 147, .18);
+  --header-alto: 72px;
+  --transicion: .25s ease;
+}
+
+/* ---------- BASE ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--fondo);
+  -webkit-font-smoothing: antialiased;
+}
+
+body.sin-scroll { overflow: hidden; }
+
+img { max-width: 100%; display: block; }
+a { color: var(--azul); }
+button, select, input { font: inherit; }
+p { margin: 0 0 1rem; }
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulos);
+  font-weight: 400;
+  letter-spacing: .02em;
+  line-height: 1.05;
+  margin: 0 0 .5rem;
+}
+
+section, footer { scroll-margin-top: calc(var(--header-alto) + 8px); }
+
+:focus-visible {
+  outline: 3px solid var(--azul);
+  outline-offset: 3px;
+}
+.header :focus-visible,
+.hero :focus-visible,
+.promo :focus-visible,
+.footer :focus-visible,
+.carrito__cabecera :focus-visible { outline-color: var(--amarillo); }
+
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+.saltar {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 200;
+  background: var(--amarillo);
+  color: var(--texto);
+  padding: .6rem 1rem;
+  border-radius: var(--radio-sm);
+  font-weight: 700;
+}
+.saltar:focus { left: 8px; }
+
+.visualmente-oculto {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+/* ---------- BOTONES ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  min-height: 44px;
+  padding: .75rem 1.3rem;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--transicion), background-color var(--transicion),
+              color var(--transicion), box-shadow var(--transicion), border-color var(--transicion);
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+.btn:disabled { opacity: .5; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.btn--azul { background: var(--azul); color: var(--blanco); }
+.btn--azul:hover:not(:disabled) { background: var(--azul-oscuro); box-shadow: var(--sombra-fuerte); }
+
+.btn--amarillo { background: var(--amarillo); color: var(--texto); }
+.btn--amarillo:hover:not(:disabled) { background: var(--amarillo-oscuro); box-shadow: 0 10px 24px rgba(252, 209, 22, .35); }
+
+.btn--rojo { background: var(--rojo); color: var(--blanco); }
+.btn--rojo:hover:not(:disabled) { background: var(--rojo-oscuro); box-shadow: 0 10px 24px rgba(206, 17, 38, .3); }
+
+.btn--contorno { background: transparent; color: var(--blanco); border-color: var(--blanco); }
+.btn--contorno:hover { background: var(--blanco); color: var(--azul); }
+
+.btn--fantasma { background: transparent; color: var(--texto-suave); border-color: var(--borde); }
+.btn--fantasma:hover:not(:disabled) { border-color: var(--rojo); color: var(--rojo); }
+
+.btn--grande { padding: .9rem 1.6rem; font-size: 1.05rem; }
+.btn--bloque { width: 100%; }
+
+.btn-icono {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .12);
+  color: var(--blanco);
+  cursor: pointer;
+  transition: background-color var(--transicion), transform var(--transicion);
+}
+.btn-icono:hover { background: rgba(255, 255, 255, .24); }
+
+/* ---------- HEADER ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--azul);
+  color: var(--blanco);
+  transition: box-shadow var(--transicion);
+}
+.header::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, var(--amarillo) 0 50%, var(--azul-oscuro) 50% 75%, var(--rojo) 75% 100%);
+}
+.header--scroll { box-shadow: 0 6px 20px rgba(0, 0, 0, .25); }
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: calc(var(--header-alto) - 4px);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  color: var(--blanco);
+  text-decoration: none;
+  line-height: 1;
+}
+.logo__marca {
+  font-family: var(--fuente-titulos);
+  font-size: 1.75rem;
+  letter-spacing: .04em;
+}
+.logo__marca span { color: var(--amarillo); }
+.logo__sub {
+  margin-top: .2rem;
+  font-size: .66rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .85;
+}
+
+.header__acciones { display: flex; align-items: center; gap: .5rem; }
+.header__cta { display: none; }
+
+.carrito-btn__contador {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border: 2px solid var(--azul);
+  border-radius: 999px;
+  background: var(--rojo);
+  color: var(--blanco);
+  font-size: .72rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.carrito-btn__contador--vacio { background: var(--texto-suave); }
+.contador--pulso { animation: pulso .45s ease; }
+@keyframes pulso { 50% { transform: scale(1.35); } }
+
+.menu-btn { flex-direction: column; gap: 4px; }
+.menu-btn span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--blanco);
+  transition: transform var(--transicion), opacity var(--transicion);
+}
+.menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* Menú móvil desplegable */
+.nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: .5rem 16px 1.5rem;
+  background: var(--azul-oscuro);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity var(--transicion), transform var(--transicion), visibility 0s linear .25s;
+}
+.nav.abierto {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity var(--transicion), transform var(--transicion), visibility 0s;
+}
+.nav__lista { list-style: none; margin: 0 0 1rem; padding: 0; }
+.nav__link {
+  display: block;
+  padding: .85rem .25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, .12);
+  color: var(--blanco);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transicion);
+}
+.nav__link:hover, .nav__link.activo { color: var(--amarillo); }
+.nav__cta { width: 100%; }
+
+@media (min-width: 960px) {
+  .menu-btn { display: none; }
+  .header__cta { display: inline-flex; }
+  .nav {
+    position: static;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+  .nav__lista { display: flex; gap: 1.75rem; margin: 0; }
+  .nav__link { position: relative; padding: .5rem 0; border: 0; }
+  .nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--amarillo);
+    transition: width var(--transicion);
+  }
+  .nav__link:hover::after, .nav__link.activo::after { width: 100%; }
+  .nav__cta { display: none; }
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0 3.5rem;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(252, 209, 22, .22), transparent 45%),
+    radial-gradient(circle at 5% 95%, rgba(206, 17, 38, .25), transparent 40%),
+    linear-gradient(135deg, var(--azul) 0%, var(--azul-oscuro) 100%);
+  color: var(--blanco);
+}
+.hero__inner { display: grid; gap: 2.25rem; align-items: center; }
+
+.hero__etiqueta {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: .3rem .85rem;
+  border: 1px solid rgba(252, 209, 22, .45);
+  border-radius: 999px;
+  background: rgba(252, 209, 22, .12);
+  color: var(--amarillo);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.hero__titulo { font-size: clamp(2.7rem, 10vw, 5rem); margin-bottom: .75rem; }
+.hero__eslogan {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.5rem, 5vw, 2.1rem);
+  letter-spacing: .05em;
+  color: var(--amarillo);
+}
+.hero__desc { max-width: 52ch; margin-bottom: 1.75rem; opacity: .92; font-size: 1.05rem; }
+.hero__botones { display: flex; flex-wrap: wrap; gap: .75rem; }
+.hero__botones .btn { flex: 1 1 auto; }
+
+.hero__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: calc(var(--radio) * 1.4);
+  background: linear-gradient(160deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .04));
+  box-shadow: 0 24px 50px rgba(0, 0, 0, .3);
+}
+.hero__media img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__respaldo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: clamp(4rem, 15vw, 7.5rem);
+}
+.hero__respaldo span { animation: flotar 4s ease-in-out infinite; }
+.hero__respaldo span:last-child { animation-delay: -2s; }
+@keyframes flotar { 50% { transform: translateY(-10px) rotate(-4deg); } }
+
+@media (min-width: 900px) {
+  .hero { padding: 5rem 0; }
+  .hero__inner { grid-template-columns: 1.1fr 1fr; gap: 3.5rem; }
+  .hero__botones .btn { flex: 0 0 auto; }
+}
+
+/* ---------- BENEFICIOS ---------- */
+.beneficios {
+  padding: 1.5rem 0;
+  background: var(--blanco);
+  border-bottom: 1px solid var(--borde);
+}
+.beneficios__lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.beneficio { display: flex; align-items: flex-start; gap: .8rem; }
+.beneficio__icono {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--azul-claro);
+  font-size: 1.35rem;
+}
+.beneficio h3 {
+  margin: 0 0 .1rem;
+  font-family: var(--fuente-texto);
+  font-size: .98rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+.beneficio p { margin: 0; font-size: .87rem; line-height: 1.4; color: var(--texto-suave); }
+
+@media (min-width: 540px) { .beneficios__lista { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .beneficios__lista { grid-template-columns: repeat(4, 1fr); } }
+
+/* ---------- SECCIONES ---------- */
+.seccion { padding: 3.5rem 0; }
+.seccion--blanca { background: var(--blanco); }
+.seccion__cabecera { max-width: 660px; margin: 0 auto 2rem; text-align: center; }
+.seccion__kicker {
+  display: inline-block;
+  margin-bottom: .35rem;
+  color: var(--rojo);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.seccion__titulo { font-size: clamp(2.1rem, 6.5vw, 3.2rem); color: var(--azul); }
+.seccion__texto { margin: 0; color: var(--texto-suave); }
+
+@media (min-width: 768px) {
+  .contenedor { padding-inline: 24px; }
+  .seccion { padding: 5rem 0; }
+  .seccion__cabecera { margin-bottom: 2.75rem; }
+}
+
+/* ---------- TARJETAS DE PRODUCTO ---------- */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  gap: 1.25rem;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+.tarjeta:hover { transform: translateY(-4px); box-shadow: var(--sombra-fuerte); }
+
+.tarjeta__media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--azul-claro), var(--blanco));
+}
+.tarjeta__media img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s ease;
+}
+.tarjeta:hover .tarjeta__media img { transform: scale(1.05); }
+.tarjeta__respaldo {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 4.75rem;
+}
+
+.badge {
+  position: absolute;
+  top: .75rem;
+  left: .75rem;
+  z-index: 2;
+  padding: .28rem .65rem;
+  border-radius: 999px;
+  background: var(--amarillo);
+  color: var(--texto);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .12);
+}
+
+.tarjeta__cuerpo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: .6rem;
+  padding: 1rem 1.1rem 1.2rem;
+}
+.tarjeta__etiquetas { display: flex; flex-wrap: wrap; gap: .4rem; }
+.etiqueta {
+  padding: .2rem .55rem;
+  border-radius: 6px;
+  background: var(--amarillo-suave);
+  color: #5C4A00;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.etiqueta--azul { background: var(--azul-claro); color: var(--azul); }
+
+.tarjeta__nombre { margin: 0; font-size: 1.55rem; color: var(--texto); }
+.tarjeta__desc { flex: 1; margin: 0; font-size: .92rem; line-height: 1.5; color: var(--texto-suave); }
+.tarjeta__precio { margin: 0; font-size: 1.4rem; font-weight: 700; color: var(--rojo); }
+
+.tarjeta__talla {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .6rem;
+  min-height: 44px;
+  font-size: .9rem;
+  font-weight: 600;
+}
+.tarjeta__talla .campo-select { flex: 1; max-width: 140px; }
+.tarjeta__talla-unica {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  min-height: 44px;
+  margin: 0;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+.campo-select {
+  min-height: 44px;
+  padding: .5rem 2.2rem .5rem .85rem;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-sm);
+  background: var(--blanco) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23003893' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right .8rem center / 12px;
+  color: var(--texto);
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: border-color var(--transicion);
+}
+.campo-select:hover { border-color: var(--azul); }
+
+/* ---------- PROMOCIÓN ---------- */
+.promo { padding-bottom: 3.5rem; }
+.promo__caja {
+  position: relative;
+  display: grid;
+  align-items: center;
+  gap: 1.25rem;
+  overflow: hidden;
+  padding: 2.25rem 1.5rem;
+  border-radius: calc(var(--radio) * 1.5);
+  background: linear-gradient(120deg, var(--rojo) 0%, #9E0C1D 100%);
+  color: var(--blanco);
+  box-shadow: 0 18px 40px rgba(206, 17, 38, .25);
+}
+.promo__caja::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgba(252, 209, 22, .22);
+}
+.promo__texto-bloque { position: relative; }
+.promo__etiqueta {
+  display: inline-block;
+  margin-bottom: .6rem;
+  padding: .25rem .7rem;
+  border-radius: 999px;
+  background: var(--amarillo);
+  color: var(--texto);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.promo__titulo { font-size: clamp(2.2rem, 7vw, 3.4rem); }
+.promo__texto { max-width: 52ch; margin-bottom: 1.4rem; opacity: .95; }
+.promo__iconos { position: relative; margin: 0; font-size: 3.2rem; text-align: center; }
+
+@media (min-width: 768px) {
+  .promo { padding-bottom: 5rem; }
+  .promo__caja { grid-template-columns: 1fr auto; padding: 3rem; }
+  .promo__iconos { font-size: 4.5rem; }
+}
+
+/* ---------- SELECCIONES ---------- */
+.selecciones__lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.seleccion-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente-titulos);
+  font-size: 1.5rem;
+  letter-spacing: .03em;
+  line-height: 1.1;
+  cursor: pointer;
+  transition: transform var(--transicion), border-color var(--transicion), box-shadow var(--transicion);
+}
+.seleccion-chip small {
+  font-family: var(--fuente-texto);
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--texto-suave);
+}
+.seleccion-chip:hover { transform: translateY(-3px); border-color: var(--azul); box-shadow: var(--sombra); }
+.seleccion-chip--principal { border-color: var(--amarillo); background: #FFFBE6; }
+.seleccion-chip--principal:hover { border-color: var(--amarillo-oscuro); }
+
+/* ---------- FILTROS ---------- */
+.filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--blanco);
+}
+.filtros__tipos { display: flex; flex-wrap: wrap; gap: .5rem; }
+.chip {
+  min-height: 42px;
+  padding: .45rem 1.1rem;
+  border: 2px solid var(--borde);
+  border-radius: 999px;
+  background: var(--blanco);
+  color: var(--texto);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transicion), border-color var(--transicion), color var(--transicion);
+}
+.chip:hover { border-color: var(--azul); color: var(--azul); }
+.chip[aria-pressed="true"] { border-color: var(--azul); background: var(--azul); color: var(--blanco); }
+
+.filtros__seleccion { display: flex; align-items: center; gap: .6rem; font-weight: 600; }
+.filtros__seleccion .campo-select { flex: 1; }
+.filtros__resultado { margin-bottom: 1rem; font-size: .9rem; color: var(--texto-suave); }
+
+@media (min-width: 768px) {
+  .filtros { flex-direction: row; align-items: center; justify-content: space-between; }
+  .filtros__seleccion .campo-select { min-width: 200px; }
+}
+
+.vacio-msg {
+  padding: 2rem 1rem;
+  border: 2px dashed var(--borde);
+  border-radius: var(--radio);
+  text-align: center;
+  color: var(--texto-suave);
+}
+.vacio-msg__icono { font-size: 2.5rem; margin-bottom: .5rem; }
+
+/* ---------- GUÍA DE TALLAS ---------- */
+.tallas__grid { display: grid; gap: 1.75rem; }
+.tabla-contenedor {
+  overflow-x: auto;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+}
+.tabla { width: 100%; min-width: 460px; border-collapse: collapse; }
+.tabla caption {
+  padding: .9rem 1rem;
+  font-weight: 700;
+  text-align: left;
+  color: var(--texto-suave);
+}
+.tabla th, .tabla td { padding: .85rem 1rem; border-bottom: 1px solid var(--borde); text-align: center; }
+.tabla thead th { background: var(--azul); color: var(--blanco); font-weight: 700; font-size: .9rem; }
+.tabla tbody th { font-family: var(--fuente-titulos); font-size: 1.4rem; font-weight: 400; color: var(--azul); }
+.tabla tbody tr:nth-child(even) { background: var(--fondo); }
+.tabla tbody tr:last-child th, .tabla tbody tr:last-child td { border-bottom: 0; }
+.tabla tbody tr:hover { background: var(--amarillo-suave); }
+
+.tallas__ayuda {
+  padding: 1.5rem;
+  border-left: 5px solid var(--amarillo);
+  border-radius: var(--radio);
+  background: var(--fondo);
+}
+.tallas__ayuda h3 { font-size: 1.8rem; color: var(--azul); }
+.tallas__ayuda ol { margin: 0 0 1rem; padding-left: 1.2rem; }
+.tallas__ayuda li { margin-bottom: .5rem; }
+.tallas__nota { margin-bottom: .4rem; font-size: .9rem; color: var(--texto-suave); }
+
+@media (min-width: 900px) { .tallas__grid { grid-template-columns: 1.4fr 1fr; align-items: start; } }
+
+/* ---------- CALIDAD ---------- */
+.calidad__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1.25rem;
+}
+.calidad__item {
+  padding: 1.6rem;
+  border-top: 5px solid var(--amarillo);
+  border-radius: var(--radio);
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+  transition: transform var(--transicion);
+}
+.calidad__item:nth-child(2) { border-top-color: var(--azul); }
+.calidad__item:nth-child(3) { border-top-color: var(--rojo); }
+.calidad__item:hover { transform: translateY(-4px); }
+.calidad__icono { margin-bottom: .5rem; font-size: 2.2rem; }
+.calidad__item h3 { font-size: 1.8rem; color: var(--azul); }
+.calidad__item p:last-child { margin: 0; color: var(--texto-suave); }
+
+/* ---------- TESTIMONIOS ---------- */
+.testimonios__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.25rem;
+}
+.testimonio {
+  margin: 0;
+  padding: 1.5rem;
+  border-radius: var(--radio);
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+}
+.testimonio blockquote { margin: 0 0 1rem; font-size: 1.02rem; }
+.testimonio blockquote::before {
+  content: "“";
+  display: block;
+  font-family: var(--fuente-titulos);
+  font-size: 3rem;
+  line-height: .6;
+  color: var(--amarillo-oscuro);
+}
+.testimonio figcaption { font-size: .9rem; color: var(--texto-suave); }
+.testimonio figcaption strong { color: var(--texto); }
+
+/* ---------- PREGUNTAS FRECUENTES ---------- */
+.faq { display: grid; gap: .75rem; max-width: 820px; margin: 0 auto; }
+.faq__item {
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--blanco);
+  transition: box-shadow var(--transicion);
+}
+.faq__item:hover { box-shadow: var(--sombra); }
+.faq__pregunta { margin: 0; font-family: var(--fuente-texto); font-size: 1rem; letter-spacing: 0; line-height: 1.3; }
+.faq__boton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  min-height: 56px;
+  padding: 1rem 1.25rem;
+  border: 0;
+  background: none;
+  color: var(--texto);
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: color var(--transicion);
+}
+.faq__boton:hover { color: var(--azul); }
+.faq__icono {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--azul-claro);
+  color: var(--azul);
+  font-size: 1.2rem;
+  transition: transform var(--transicion), background-color var(--transicion);
+}
+.faq__boton[aria-expanded="true"] .faq__icono { transform: rotate(45deg); background: var(--amarillo); color: var(--texto); }
+.faq__respuesta { padding: 0 1.25rem 1.1rem; color: var(--texto-suave); animation: aparecer .3s ease; }
+.faq__respuesta p { margin: 0; }
+@keyframes aparecer { from { opacity: 0; transform: translateY(-6px); } }
+
+/* ---------- FOOTER ---------- */
+.footer {
+  padding: 3.5rem 0 1.5rem;
+  border-top: 5px solid var(--amarillo);
+  background: var(--texto);
+  color: #C9CFDB;
+  font-size: .95rem;
+}
+.footer__grid { display: grid; gap: 2rem; }
+.footer__marca { margin-bottom: .5rem; color: var(--blanco); font-size: 2rem; }
+.footer__titulo { margin-bottom: .9rem; font-size: 1.45rem; color: var(--blanco); }
+.footer a { color: var(--blanco); text-decoration: none; transition: color var(--transicion); }
+.footer a:hover { color: var(--amarillo); text-decoration: underline; }
+.footer__lista { display: grid; gap: .55rem; list-style: none; margin: 0; padding: 0; }
+
+.redes { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; margin: 1rem 0 0; padding: 0; }
+.redes a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: .4rem .95rem;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 999px;
+  font-size: .88rem;
+  font-weight: 600;
+}
+.redes a:hover { border-color: var(--amarillo); background: var(--amarillo); color: var(--texto); text-decoration: none; }
+
+.politica { border-bottom: 1px solid rgba(255, 255, 255, .12); }
+.politica summary {
+  padding: .6rem 0;
+  color: var(--blanco);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color var(--transicion);
+}
+.politica summary:hover { color: var(--amarillo); }
+.politica p { margin: 0 0 .8rem; font-size: .88rem; }
+
+.footer__base {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: .5rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, .12);
+  font-size: .85rem;
+}
+.footer__base p { margin: 0; }
+
+@media (min-width: 640px) { .footer__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .footer__grid { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; } }
+
+/* ---------- CARRITO (panel lateral) ---------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(15, 20, 32, .55);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility 0s linear .3s;
+}
+.overlay.visible { opacity: 1; visibility: visible; transition: opacity .3s ease; }
+
+.carrito {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  width: min(420px, 100%);
+  height: 100%;
+  height: 100dvh;
+  background: var(--blanco);
+  box-shadow: -12px 0 40px rgba(0, 0, 0, .2);
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: transform .3s ease, visibility 0s linear .3s;
+}
+.carrito.abierto { transform: none; visibility: visible; transition: transform .3s ease; }
+
+.carrito__cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--azul);
+  color: var(--blanco);
+}
+.carrito__titulo { margin: 0; font-size: 1.9rem; }
+.carrito__unidades { color: var(--amarillo); }
+
+.carrito__cuerpo { flex: 1; overflow-y: auto; padding: 1rem 1.25rem; }
+.carrito__lista { display: grid; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+
+.carrito__vacio { padding: 2.5rem .5rem; text-align: center; color: var(--texto-suave); }
+.carrito__vacio-icono { font-size: 3.5rem; margin-bottom: .5rem; }
+.carrito__vacio strong { color: var(--texto); }
+
+.item {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: .9rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--borde);
+  animation: aparecer .25s ease;
+}
+.item__media {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  overflow: hidden;
+  border-radius: var(--radio-sm);
+  background: var(--azul-claro);
+  font-size: 2rem;
+}
+.item__media img { width: 100%; height: 100%; object-fit: cover; }
+.item__nombre { margin: 0; font-weight: 700; line-height: 1.3; }
+.item__detalle { margin: .15rem 0 .55rem; font-size: .85rem; color: var(--texto-suave); }
+.item__fila { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem; }
+
+.cantidad {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+}
+.cantidad button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: var(--fondo);
+  color: var(--azul);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--transicion);
+}
+.cantidad button:hover { background: var(--azul-claro); }
+.cantidad__valor { min-width: 34px; font-weight: 700; text-align: center; }
+
+.item__subtotal { font-weight: 700; color: var(--rojo); }
+.item__eliminar {
+  margin-top: .35rem;
+  padding: .25rem 0;
+  border: 0;
+  background: none;
+  color: var(--texto-suave);
+  font-size: .85rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.item__eliminar:hover { color: var(--rojo); }
+
+.carrito__pie {
+  display: grid;
+  gap: .5rem;
+  padding: 1rem 1.25rem 1.25rem;
+  border-top: 1px solid var(--borde);
+  background: var(--fondo);
+}
+.carrito__linea { display: flex; justify-content: space-between; gap: 1rem; margin: 0; }
+.carrito__linea--total { margin-top: .25rem; font-size: 1.2rem; font-weight: 700; }
+.carrito__linea--total strong { color: var(--rojo); }
+.envio-gratis { color: var(--azul); }
+.carrito__botones { display: grid; gap: .5rem; margin-top: .5rem; }
+
+/* ---------- MODAL DE COMPRA ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s ease, visibility 0s linear .25s;
+}
+.modal.abierto { opacity: 1; visibility: visible; transition: opacity .25s ease; }
+.modal__fondo { position: absolute; inset: 0; background: rgba(15, 20, 32, .65); }
+.modal__caja {
+  position: relative;
+  width: min(500px, 100%);
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  padding: 2rem 1.5rem 1.5rem;
+  border-top: 6px solid var(--amarillo);
+  border-radius: calc(var(--radio) * 1.2);
+  background: var(--blanco);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .3);
+  transform: translateY(14px) scale(.98);
+  transition: transform .25s ease;
+}
+.modal.abierto .modal__caja { transform: none; }
+.modal__cerrar { position: absolute; top: .75rem; right: .75rem; background: var(--fondo); color: var(--texto); }
+.modal__cerrar:hover { background: var(--azul-claro); }
+.modal__titulo { padding-right: 2.5rem; font-size: 2.1rem; color: var(--azul); }
+.modal__titulo:focus { outline: none; }
+.modal__texto { color: var(--texto-suave); }
+.modal__icono { margin-bottom: .25rem; font-size: 3rem; }
+
+.resumen { display: grid; gap: .55rem; list-style: none; margin: 1rem 0; padding: 0; }
+.resumen li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: .55rem;
+  border-bottom: 1px dashed var(--borde);
+  font-size: .95rem;
+}
+.resumen small { color: var(--texto-suave); }
+.resumen strong { white-space: nowrap; }
+
+.modal__botones { display: grid; gap: .6rem; margin-top: 1.25rem; }
+@media (min-width: 480px) { .modal__botones { grid-template-columns: 1fr 1fr; } }
+
+.pedido-numero {
+  display: inline-block;
+  padding: .2rem .6rem;
+  border-radius: 6px;
+  background: var(--amarillo-suave);
+  font-weight: 700;
+}
+
+/* ---------- AVISO (TOAST) ---------- */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  z-index: 120;
+  max-width: calc(100% - 32px);
+  padding: .8rem 1.3rem;
+  border-left: 5px solid var(--amarillo);
+  border-radius: var(--radio-sm);
+  background: var(--texto);
+  color: var(--blanco);
+  font-size: .92rem;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .3);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 20px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.toast.visible { opacity: 1; transform: translate(-50%, 0); }
+
+/* ---------- ANIMACIÓN AL HACER SCROLL ---------- */
+.revelar { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+.revelar.visible { opacity: 1; transform: none; }
+
+/* ---------- MENOS MOVIMIENTO ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <div class="contenedor header__inner">
+      <a href="#inicio" class="logo" aria-label="Fuera de lugar, ir al inicio">
+        <span class="logo__marca">Fuera de <span>lugar</span></span>
+        <span class="logo__sub">Gorras y camisetas de selecciones</span>
+      </a>
+
+      <nav class="nav" id="menu-principal" aria-label="Menú principal">
+        <ul class="nav__lista">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#catalogo" class="nav__link">Catálogo</a></li>
+          <li><a href="#selecciones" class="nav__link">Selecciones</a></li>
+          <li><a href="#tallas" class="nav__link">Guía de tallas</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+        <a href="#catalogo" class="btn btn--amarillo nav__cta">Comprar ahora</a>
+      </nav>
+
+      <div class="header__acciones">
+        <a href="#catalogo" class="btn btn--amarillo header__cta">Comprar ahora</a>
+        <button type="button" class="btn-icono carrito-btn" id="abrir-carrito" aria-label="Abrir carrito, 0 unidades" aria-controls="carrito" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="carrito-btn__contador" id="contador-carrito" aria-hidden="true">0</span>
+        </button>
+        <button type="button" class="btn-icono menu-btn" id="menu-btn" aria-label="Abrir menú" aria-controls="menu-principal" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="contenedor hero__inner">
+        <div class="hero__texto">
+          <p class="hero__etiqueta">Hinchas de verdad · Bogotá y toda Colombia</p>
+          <h1 class="hero__titulo" id="hero-titulo">Vístete con los colores de tu selección</h1>
+          <p class="hero__eslogan">Pasión que se lleva puesta</p>
+          <p class="hero__desc">Camisetas y gorras de selecciones para alentar en el estadio, en la casa o con el parche. Envío gratis en Bogotá y cambios de talla sin enredos.</p>
+          <div class="hero__botones">
+            <button type="button" class="btn btn--amarillo btn--grande" data-ir-tipo="camiseta">Ver camisetas</button>
+            <button type="button" class="btn btn--contorno btn--grande" data-ir-tipo="gorra">Ver gorras</button>
+          </div>
+        </div>
+
+        <!-- EDITA: escribe en data-imagen la ruta o el link de tu foto principal (ej: "img/hero.jpg") -->
+        <div class="hero__media" id="hero-media" data-imagen="" data-alt="Camisetas y gorras de selecciones de fútbol de la tienda Fuera de lugar">
+          <div class="hero__respaldo" aria-hidden="true"><span>👕</span><span>🧢</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BENEFICIOS ===================== -->
+    <!-- EDITA: ajusta estos textos si cambian tus condiciones -->
+    <section class="beneficios" aria-label="Beneficios de comprar en Fuera de lugar">
+      <div class="contenedor">
+        <ul class="beneficios__lista">
+          <li class="beneficio">
+            <span class="beneficio__icono" aria-hidden="true">🚚</span>
+            <div><h3>Envío gratis en Bogotá</h3><p>Te llevamos el pedido hasta la puerta, sin costo.</p></div>
+          </li>
+          <li class="beneficio">
+            <span class="beneficio__icono" aria-hidden="true">🔒</span>
+            <div><h3>Compra segura</h3><p>Medios de pago confiables y confirmación de cada pedido.</p></div>
+          </li>
+          <li class="beneficio">
+            <span class="beneficio__icono" aria-hidden="true">📦</span>
+            <div><h3>Seguimiento de pedido</h3><p>Te avisamos cuando sale y cuando va en camino.</p></div>
+          </li>
+          <li class="beneficio">
+            <span class="beneficio__icono" aria-hidden="true">🔄</span>
+            <div><h3>Cambios de talla</h3><p>¿No te quedó? Te la cambiamos por otra talla.</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== DESTACADOS ===================== -->
+    <section class="seccion" id="destacados" aria-labelledby="destacados-titulo">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <p class="seccion__kicker">Lo más pedido</p>
+          <h2 class="seccion__titulo" id="destacados-titulo">Los favoritos de la hinchada</h2>
+          <p class="seccion__texto">Arrancamos con la Tricolor, como debe ser.</p>
+        </div>
+        <div class="grid-productos" id="grid-destacados"></div>
+      </div>
+    </section>
+
+    <!-- ===================== PROMOCIÓN ===================== -->
+    <!-- EDITA: cambia el texto de la promoción cuando quieras -->
+    <section class="promo" aria-labelledby="promo-titulo">
+      <div class="contenedor">
+        <div class="promo__caja">
+          <div class="promo__texto-bloque">
+            <p class="promo__etiqueta">Promoción</p>
+            <h2 class="promo__titulo" id="promo-titulo">Combo camiseta + gorra</h2>
+            <p class="promo__texto">Arma el combo completo de tu selección y sal listo para el partido. Escríbenos por WhatsApp y te contamos el precio especial del combo.</p>
+            <button type="button" class="btn btn--amarillo btn--grande" data-ir-seleccion="Colombia">Armar mi combo Colombia</button>
+          </div>
+          <p class="promo__iconos" aria-hidden="true">👕 + 🧢</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SELECCIONES ===================== -->
+    <section class="seccion seccion--blanca" id="selecciones" aria-labelledby="selecciones-titulo">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <p class="seccion__kicker">Elige tu equipo</p>
+          <h2 class="seccion__titulo" id="selecciones-titulo">Compra por selección</h2>
+          <p class="seccion__texto">Toca tu selección y te mostramos todo lo que tenemos de ella.</p>
+        </div>
+        <ul class="selecciones__lista" id="lista-selecciones"></ul>
+      </div>
+    </section>
+
+    <!-- ===================== CATÁLOGO ===================== -->
+    <section class="seccion" id="catalogo" aria-labelledby="catalogo-titulo">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <p class="seccion__kicker">Catálogo</p>
+          <h2 class="seccion__titulo" id="catalogo-titulo">Camisetas y gorras</h2>
+          <p class="seccion__texto">Filtra por tipo o por selección y encuentra la tuya.</p>
+        </div>
+
+        <div class="filtros">
+          <div class="filtros__tipos" role="group" aria-label="Filtrar por tipo de producto">
+            <button type="button" class="chip" data-filtro-tipo="todos" aria-pressed="true">Todos</button>
+            <button type="button" class="chip" data-filtro-tipo="camiseta" aria-pressed="false">Camisetas</button>
+            <button type="button" class="chip" data-filtro-tipo="gorra" aria-pressed="false">Gorras</button>
+          </div>
+          <label class="filtros__seleccion" for="filtro-seleccion">
+            <span>Selección</span>
+            <select class="campo-select" id="filtro-seleccion">
+              <option value="todas">Todas</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="filtros__resultado" id="resultado-filtros" aria-live="polite"></p>
+
+        <div class="grid-productos" id="grid-productos"></div>
+
+        <div class="vacio-msg" id="catalogo-vacio" hidden>
+          <p>No encontramos productos con esos filtros.</p>
+          <button type="button" class="btn btn--azul" data-limpiar-filtros>Ver todos los productos</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GUÍA DE TALLAS ===================== -->
+    <!-- EDITA: ajusta las medidas a las de tus camisetas -->
+    <section class="seccion seccion--blanca" id="tallas" aria-labelledby="tallas-titulo">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <p class="seccion__kicker">Que te quede perfecta</p>
+          <h2 class="seccion__titulo" id="tallas-titulo">Guía de tallas</h2>
+          <p class="seccion__texto">Medidas de nuestras camisetas, tomadas con la prenda extendida.</p>
+        </div>
+
+        <div class="tallas__grid">
+          <div class="tabla-contenedor" role="region" aria-labelledby="tabla-tallas-caption" tabindex="0">
+            <table class="tabla">
+              <caption id="tabla-tallas-caption">Medidas de camisetas en centímetros</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Talla</th>
+                  <th scope="col">Ancho de pecho</th>
+                  <th scope="col">Largo</th>
+                  <th scope="col">Contorno de pecho aprox.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">S</th><td>48</td><td>70</td><td>88 – 94</td></tr>
+                <tr><th scope="row">M</th><td>51</td><td>72</td><td>95 – 100</td></tr>
+                <tr><th scope="row">L</th><td>54</td><td>74</td><td>101 – 106</td></tr>
+                <tr><th scope="row">XL</th><td>57</td><td>76</td><td>107 – 112</td></tr>
+                <tr><th scope="row">XXL</th><td>60</td><td>78</td><td>113 – 118</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tallas__ayuda">
+            <h3>¿Cómo medirte?</h3>
+            <ol>
+              <li><strong>Pecho:</strong> extiende una camiseta que te quede bien y mide de axila a axila.</li>
+              <li><strong>Largo:</strong> mide desde la parte más alta del hombro hasta el borde de abajo.</li>
+              <li><strong>¿Quedaste entre dos tallas?</strong> Elige la más grande si te gusta más holgada.</li>
+            </ol>
+            <p class="tallas__nota">🧢 Las gorras son talla única con cierre ajustable atrás.</p>
+            <p class="tallas__nota">Las medidas son aproximadas y pueden variar unos 2 cm según el modelo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CALIDAD ===================== -->
+    <!-- EDITA: ajusta estos textos a las características reales de tus productos -->
+    <section class="seccion" id="calidad" aria-labelledby="calidad-titulo">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <p class="seccion__kicker">Calidad que se siente</p>
+          <h2 class="seccion__titulo" id="calidad-titulo">Hechas para el partido y para el día a día</h2>
+        </div>
+        <div class="calidad__grid">
+          <article class="calidad__item">
+            <p class="calidad__icono" aria-hidden="true">🧵</p>
+            <h3>Tela</h3>
+            <p>Tela deportiva liviana y transpirable, que se siente fresca incluso en un partido a pleno sol.</p>
+          </article>
+          <article class="calidad__item">
+            <p class="calidad__icono" aria-hidden="true">🪡</p>
+            <h3>Costuras</h3>
+            <p>Costuras reforzadas en hombros y cuello para que la camiseta aguante lavada tras lavada.</p>
+          </article>
+          <article class="calidad__item">
+            <p class="calidad__icono" aria-hidden="true">📏</p>
+            <h3>Ajuste</h3>
+            <p>Horma cómoda en las camisetas y gorras con cierre ajustable atrás, para que te queden como deben.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIOS ===================== -->
+    <!-- Los testimonios se agregan en el script al final de este archivo (arreglo "testimonios") -->
+    <section class="seccion seccion--blanca" id="testimonios" aria-labelledby="testimonios-titulo">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <p class="seccion__kicker">La hinchada opina</p>
+          <h2 class="seccion__titulo" id="testimonios-titulo">Lo que dicen nuestros clientes</h2>
+        </div>
+        <div class="testimonios__grid" id="lista-testimonios"></div>
+        <div class="vacio-msg" id="testimonios-vacio" hidden>
+          <p class="vacio-msg__icono" aria-hidden="true">💬</p>
+          <p>Pronto vas a ver aquí las opiniones de nuestros clientes.<br>¿Ya nos compraste? Cuéntanos cómo te fue.</p>
+          <!-- EDITA: tu número de WhatsApp con indicativo, sin espacios (ej: https://wa.me/573001234567) -->
+          <a class="btn btn--azul" href="https://wa.me/" target="_blank" rel="noopener">Contar mi experiencia</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PREGUNTAS FRECUENTES ===================== -->
+    <!-- EDITA: ajusta las respuestas a tus políticas reales -->
+    <section class="seccion" id="preguntas" aria-labelledby="preguntas-titulo">
+      <div class="contenedor">
+        <div class="seccion__cabecera">
+          <p class="seccion__kicker">Resolvemos tus dudas</p>
+          <h2 class="seccion__titulo" id="preguntas-titulo">Preguntas frecuentes</h2>
+        </div>
+
+        <div class="faq">
+          <div class="faq__item">
+            <h3 class="faq__pregunta">
+              <button type="button" class="faq__boton" aria-expanded="false" aria-controls="faq-1">
+                ¿Hacen envíos a toda Bogotá?<span class="faq__icono" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq__respuesta" id="faq-1" hidden>
+              <p>Sí. Llegamos a todas las localidades de Bogotá y el envío no tiene costo. Si estás fuera de Bogotá, escríbenos por WhatsApp y te contamos cómo hacerte llegar tu pedido.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <h3 class="faq__pregunta">
+              <button type="button" class="faq__boton" aria-expanded="false" aria-controls="faq-2">
+                ¿Cuánto se demora mi pedido?<span class="faq__icono" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq__respuesta" id="faq-2" hidden>
+              <p>En Bogotá, normalmente entre 1 y 3 días hábiles después de confirmar el pago. Te avisamos cuando tu pedido salga para que estés pendiente.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <h3 class="faq__pregunta">
+              <button type="button" class="faq__boton" aria-expanded="false" aria-controls="faq-3">
+                ¿Puedo cambiar la talla?<span class="faq__icono" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq__respuesta" id="faq-3" hidden>
+              <p>Claro. Tienes hasta 8 días calendario desde que recibes el pedido para pedir el cambio. La prenda debe estar sin usar, sin lavar y con sus etiquetas.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <h3 class="faq__pregunta">
+              <button type="button" class="faq__boton" aria-expanded="false" aria-controls="faq-4">
+                ¿Qué métodos de pago aceptan?<span class="faq__icono" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="faq__respuesta" id="faq-4" hidden>
+              <p>Transferencia bancaria, Nequi, Daviplata y pago contra entrega en Bogotá.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <!-- EDITA: tus redes, número, correo y horario -->
+  <footer class="footer" id="contacto">
+    <div class="contenedor">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <p class="logo__marca footer__marca">Fuera de <span>lugar</span></p>
+          <p>Gorras y camisetas de selecciones para hinchas de verdad. Desde Bogotá para toda Colombia.</p>
+          <ul class="redes" aria-label="Redes sociales">
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__titulo">Contacto</h2>
+          <ul class="footer__lista">
+            <li>💬 <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li>✉️ <a href="mailto:contacto@tu-dominio.com">contacto@tu-dominio.com</a></li>
+            <li>📍 Bogotá, Colombia</li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__titulo">Horario de atención</h2>
+          <ul class="footer__lista">
+            <li>Lunes a viernes: 8:00 a. m. – 6:00 p. m.</li>
+            <li>Sábados: 9:00 a. m. – 2:00 p. m.</li>
+            <li>Domingos y festivos: respondemos mensajes</li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__titulo">Políticas</h2>
+          <details class="politica">
+            <summary>Política de envíos</summary>
+            <p>Envío gratis en Bogotá, de 1 a 3 días hábiles después de confirmar el pago. Para otras ciudades, consúltanos por WhatsApp.</p>
+          </details>
+          <details class="politica">
+            <summary>Política de cambios</summary>
+            <p>Cambios de talla hasta 8 días calendario después de recibir el pedido. La prenda debe estar sin usar, sin lavar y con etiquetas.</p>
+          </details>
+          <details class="politica">
+            <summary>Política de devoluciones</summary>
+            <p>Si tu producto llega con un defecto de fábrica, escríbenos dentro de los 8 días siguientes a la entrega y lo solucionamos con cambio o devolución del dinero.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="footer__base">
+        <p>© <span id="anio">2026</span> Fuera de lugar. Todos los derechos reservados.</p>
+        <a href="#inicio">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== CARRITO (panel lateral) ===================== -->
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <aside class="carrito" id="carrito" role="dialog" aria-modal="true" aria-labelledby="carrito-titulo" aria-hidden="true" inert>
+    <div class="carrito__cabecera">
+      <h2 class="carrito__titulo" id="carrito-titulo">Tu carrito <span class="carrito__unidades" id="carrito-unidades">(0)</span></h2>
+      <button type="button" class="btn-icono" id="cerrar-carrito" aria-label="Cerrar carrito">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="carrito__cuerpo">
+      <div class="carrito__vacio" id="carrito-vacio">
+        <p class="carrito__vacio-icono" aria-hidden="true">🛒</p>
+        <p><strong>Tu carrito está vacío.</strong></p>
+        <p>Elige la camiseta o la gorra de tu selección y alista el próximo partido.</p>
+        <a href="#catalogo" class="btn btn--azul" id="carrito-ir-catalogo">Ver catálogo</a>
+      </div>
+      <ul class="carrito__lista" id="carrito-items" hidden></ul>
+    </div>
+
+    <div class="carrito__pie">
+      <p class="carrito__linea"><span>Subtotal</span><span id="carrito-subtotal">$ 0</span></p>
+      <p class="carrito__linea"><span>Envío en Bogotá</span><strong class="envio-gratis">Gratis</strong></p>
+      <p class="carrito__linea carrito__linea--total"><span>Total</span><strong id="carrito-total">$ 0</strong></p>
+      <div class="carrito__botones">
+        <button type="button" class="btn btn--rojo btn--bloque" id="btn-finalizar">Finalizar compra</button>
+        <button type="button" class="btn btn--fantasma btn--bloque" id="btn-vaciar">Vaciar carrito</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================== MODAL DE COMPRA ===================== -->
+  <div class="modal" id="modal-compra" aria-hidden="true" inert>
+    <div class="modal__fondo" data-cerrar-modal></div>
+    <div class="modal__caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <button type="button" class="btn-icono modal__cerrar" data-cerrar-modal aria-label="Cerrar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div id="modal-contenido"></div>
+    </div>
+  </div>
+
+  <!-- Avisos -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <p class="visualmente-oculto" id="anuncio" aria-live="polite"></p>
+
+  <script>
+/* ==========================================================
+   Fuera de lugar – Gorras y Camisetas de Selecciones
+   Script de la tienda
+
+   Para agregar un producto nuevo, solo añade un objeto al
+   arreglo "productos" con la misma estructura. Los filtros,
+   las selecciones y los destacados se actualizan solos.
+   ========================================================== */
+"use strict";
+
+/* ==========================================================
+   PRODUCTOS
+   Campos de cada producto:
+   - id:          identificador único, sin espacios
+   - nombre:      nombre que se ve en la tarjeta
+   - tipo:        "camiseta" o "gorra"
+   - seleccion:   nombre de la selección (crea su filtro automáticamente)
+   - descripcion: texto corto de la tarjeta
+   - precio:      número en pesos colombianos, sin puntos (ej: 129900)
+   - imagen:      ruta o link de tu foto (ej: "img/camiseta-colombia.jpg").
+                  Si lo dejas vacío "" se muestra el recuadro con 👕 o 🧢
+   - destacado:   true para que aparezca en "Los favoritos de la hinchada"
+   ========================================================== */
+const productos = [
+  {
+    id: "camiseta-colombia-local",
+    nombre: "Camiseta Colombia Local",
+    tipo: "camiseta",
+    seleccion: "Colombia",
+    descripcion: "La amarilla de toda la vida. Liviana y fresca para alentar a la Tricolor en el estadio o en la casa.",
+    precio: 129900,
+    imagen: "",
+    destacado: true
+  },
+  {
+    id: "camiseta-colombia-visitante",
+    nombre: "Camiseta Colombia Visitante",
+    tipo: "camiseta",
+    seleccion: "Colombia",
+    descripcion: "La azul para los partidos fuera de casa. Cómoda y lista para el próximo partido.",
+    precio: 129900,
+    imagen: "",
+    destacado: false
+  },
+  {
+    id: "gorra-colombia",
+    nombre: "Gorra Colombia",
+    tipo: "gorra",
+    seleccion: "Colombia",
+    descripcion: "Amarilla con detalles en azul y rojo. Cierre ajustable atrás.",
+    precio: 49900,
+    imagen: "",
+    destacado: true
+  },
+  {
+    id: "camiseta-argentina-local",
+    nombre: "Camiseta Argentina Local",
+    tipo: "camiseta",
+    seleccion: "Argentina",
+    descripcion: "Las clásicas rayas celeste y blanco para los que siguen a la Albiceleste.",
+    precio: 119900,
+    imagen: "",
+    destacado: true
+  },
+  {
+    id: "gorra-argentina",
+    nombre: "Gorra Argentina",
+    tipo: "gorra",
+    seleccion: "Argentina",
+    descripcion: "Celeste y blanca, con cierre ajustable para el sol del partido.",
+    precio: 45900,
+    imagen: "",
+    destacado: false
+  },
+  {
+    id: "camiseta-brasil-local",
+    nombre: "Camiseta Brasil Local",
+    tipo: "camiseta",
+    seleccion: "Brasil",
+    descripcion: "La verdeamarela de siempre, fresca y cómoda para jugar o para alentar.",
+    precio: 119900,
+    imagen: "",
+    destacado: true
+  },
+  {
+    id: "gorra-brasil",
+    nombre: "Gorra Brasil",
+    tipo: "gorra",
+    seleccion: "Brasil",
+    descripcion: "Verde con visera amarilla. Talla única ajustable.",
+    precio: 45900,
+    imagen: "",
+    destacado: false
+  },
+  {
+    id: "camiseta-espana-local",
+    nombre: "Camiseta España Local",
+    tipo: "camiseta",
+    seleccion: "España",
+    descripcion: "Roja con detalles amarillos, para los seguidores de la Roja.",
+    precio: 114900,
+    imagen: "",
+    destacado: false
+  },
+  {
+    id: "camiseta-mexico-local",
+    nombre: "Camiseta México Local",
+    tipo: "camiseta",
+    seleccion: "México",
+    descripcion: "Verde y con todo el sabor del Tri. Tela liviana de secado rápido.",
+    precio: 109900,
+    imagen: "",
+    destacado: false
+  },
+  {
+    id: "gorra-mexico",
+    nombre: "Gorra México",
+    tipo: "gorra",
+    seleccion: "México",
+    descripcion: "Verde con detalles en blanco y rojo, cierre ajustable atrás.",
+    precio: 45900,
+    imagen: "",
+    destacado: false
+  },
+  {
+    id: "camiseta-francia-local",
+    nombre: "Camiseta Francia Local",
+    tipo: "camiseta",
+    seleccion: "Francia",
+    descripcion: "Azul oscuro, sobria y elegante, para los fans de los Bleus.",
+    precio: 114900,
+    imagen: "",
+    destacado: false
+  },
+  {
+    id: "camiseta-alemania-local",
+    nombre: "Camiseta Alemania Local",
+    tipo: "camiseta",
+    seleccion: "Alemania",
+    descripcion: "Blanca con detalles en negro: un clásico de la Mannschaft.",
+    precio: 114900,
+    imagen: "",
+    destacado: false
+  }
+];
+
+/* ==========================================================
+   TESTIMONIOS
+   Agrega aquí SOLO opiniones reales de tus clientes (con su
+   permiso). Mientras el arreglo esté vacío, la sección muestra
+   una invitación a dejar su opinión.
+   Ejemplo de estructura:
+   { nombre: "Nombre del cliente", ciudad: "Bogotá", texto: "Lo que te escribió." },
+   ========================================================== */
+const testimonios = [];
+
+/* ==========================================================
+   CONFIGURACIÓN Y UTILIDADES
+   ========================================================== */
+const TALLAS_CAMISETA = ["S", "M", "L", "XL", "XXL"];
+const TALLA_UNICA = "Única";
+const SELECCION_PRINCIPAL = "Colombia";
+
+const $ = (selector, contexto = document) => contexto.querySelector(selector);
+const $$ = (selector, contexto = document) => Array.from(contexto.querySelectorAll(selector));
+
+const prefiereMenosMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function escaparHTML(texto) {
+  const reemplazos = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+  return String(texto).replace(/[&<>"']/g, (c) => reemplazos[c]);
+}
+
+function iconoProducto(tipo) {
+  return tipo === "gorra" ? "🧢" : "👕";
+}
+
+function nombreTipo(tipo) {
+  return tipo === "gorra" ? "Gorra" : "Camiseta";
+}
+
+function plural(cantidad, singular, pluralTexto) {
+  return `${cantidad} ${cantidad === 1 ? singular : pluralTexto}`;
+}
+
+/* Crea la imagen de un producto. Si falla al cargar, se quita
+   y queda visible el recuadro de respaldo (👕 / 🧢). */
+function crearImagen(src, alt) {
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = alt;
+  img.loading = "lazy";
+  img.decoding = "async";
+  img.width = 600;
+  img.height = 600;
+  img.addEventListener("error", () => img.remove());
+  return img;
+}
+
+/* ==========================================================
+   CARRITO
+   Cada elemento: { id, talla, cantidad }.
+   Se guarda en el navegador para no perderlo al recargar.
+   ========================================================== */
+const CLAVE_CARRITO = "fueraDeLugarCarrito";
+let carrito = cargarCarrito();
+
+function buscarProducto(id) {
+  return productos.find((producto) => producto.id === id);
+}
+
+function cargarCarrito() {
+  try {
+    const guardado = JSON.parse(localStorage.getItem(CLAVE_CARRITO));
+    if (!Array.isArray(guardado)) return [];
+    return guardado.filter((item) =>
+      buscarProducto(item.id) && Number.isInteger(item.cantidad) && item.cantidad > 0
+    );
+  } catch (error) {
+    return [];
+  }
+}
+
+function guardarCarrito() {
+  try {
+    localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
+  } catch (error) {
+    /* Si el navegador no permite guardar, el carrito sigue funcionando en esta visita. */
+  }
+}
+
+/* ==========================================================
+   FORMATO DE PRECIOS
+   ========================================================== */
+const formatoCOP = new Intl.NumberFormat("es-CO", {
+  style: "currency",
+  currency: "COP",
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0
+});
+
+function formatearPrecio(valor) {
+  return formatoCOP.format(valor);
+}
+
+/* ==========================================================
+   FILTROS
+   ========================================================== */
+const filtros = { tipo: "todos", seleccion: "todas" };
+
+/* Lista de selecciones sin repetir, con Colombia de primera. */
+function obtenerSelecciones() {
+  const unicas = [...new Set(productos.map((producto) => producto.seleccion))];
+  return unicas.sort((a, b) => {
+    if (a === SELECCION_PRINCIPAL) return -1;
+    if (b === SELECCION_PRINCIPAL) return 1;
+    return a.localeCompare(b, "es");
+  });
+}
+
+function llenarFiltroSelecciones() {
+  const select = $("#filtro-seleccion");
+  obtenerSelecciones().forEach((seleccion) => select.add(new Option(seleccion, seleccion)));
+}
+
+function productosFiltrados() {
+  return productos.filter((producto) =>
+    (filtros.tipo === "todos" || producto.tipo === filtros.tipo) &&
+    (filtros.seleccion === "todas" || producto.seleccion === filtros.seleccion)
+  );
+}
+
+function aplicarFiltros(cambios = {}) {
+  Object.assign(filtros, cambios);
+  $$("[data-filtro-tipo]").forEach((boton) => {
+    boton.setAttribute("aria-pressed", String(boton.dataset.filtroTipo === filtros.tipo));
+  });
+  $("#filtro-seleccion").value = filtros.seleccion;
+  mostrarProductos();
+}
+
+/* Usado por los botones del hero, las selecciones y la promoción. */
+function irAlCatalogo(cambios) {
+  aplicarFiltros(cambios);
+  cerrarMenu();
+  $("#catalogo").scrollIntoView({ behavior: prefiereMenosMovimiento ? "auto" : "smooth" });
+}
+
+/* ==========================================================
+   MOSTRAR PRODUCTOS
+   ========================================================== */
+function crearTarjeta(producto) {
+  const esCamiseta = producto.tipo === "camiseta";
+  const nombre = escaparHTML(producto.nombre);
+
+  const selectorTalla = esCamiseta
+    ? `<label class="tarjeta__talla">
+         <span>Talla</span>
+         <select class="campo-select" data-talla>
+           ${TALLAS_CAMISETA.map((talla) => `<option value="${talla}"${talla === "M" ? " selected" : ""}>${talla}</option>`).join("")}
+         </select>
+       </label>`
+    : `<p class="tarjeta__talla-unica"><span aria-hidden="true">✔</span> Talla única ajustable</p>`;
+
+  const tarjeta = document.createElement("article");
+  tarjeta.className = "tarjeta";
+  tarjeta.innerHTML = `
+    <div class="tarjeta__media">
+      <div class="tarjeta__respaldo" aria-hidden="true">${iconoProducto(producto.tipo)}</div>
+      ${producto.destacado ? '<span class="badge">Destacado</span>' : ""}
+    </div>
+    <div class="tarjeta__cuerpo">
+      <div class="tarjeta__etiquetas">
+        <span class="etiqueta">${nombreTipo(producto.tipo)}</span>
+        <span class="etiqueta etiqueta--azul">${escaparHTML(producto.seleccion)}</span>
+      </div>
+      <h3 class="tarjeta__nombre">${nombre}</h3>
+      <p class="tarjeta__desc">${escaparHTML(producto.descripcion)}</p>
+      <p class="tarjeta__precio">${formatearPrecio(producto.precio)}</p>
+      ${selectorTalla}
+      <button type="button" class="btn btn--azul btn--bloque" data-agregar="${escaparHTML(producto.id)}" aria-label="Agregar ${nombre} al carrito">
+        Agregar al carrito
+      </button>
+    </div>`;
+
+  if (producto.imagen) {
+    $(".tarjeta__media", tarjeta).append(crearImagen(producto.imagen, producto.nombre));
+  }
+  return tarjeta;
+}
+
+function renderizarLista(contenedor, lista) {
+  contenedor.replaceChildren(...lista.map(crearTarjeta));
+}
+
+function mostrarProductos() {
+  const lista = productosFiltrados();
+  renderizarLista($("#grid-productos"), lista);
+  $("#catalogo-vacio").hidden = lista.length > 0;
+  $("#resultado-filtros").textContent = `Mostrando ${plural(lista.length, "producto", "productos")}`;
+}
+
+/* Destacados: primero los de Colombia. */
+function mostrarDestacados() {
+  const lista = productos
+    .filter((producto) => producto.destacado)
+    .sort((a, b) => (b.seleccion === SELECCION_PRINCIPAL) - (a.seleccion === SELECCION_PRINCIPAL));
+  renderizarLista($("#grid-destacados"), lista);
+  $("#destacados").hidden = lista.length === 0;
+}
+
+function mostrarSelecciones() {
+  const elementos = obtenerSelecciones().map((seleccion) => {
+    const cantidad = productos.filter((producto) => producto.seleccion === seleccion).length;
+    const nombre = escaparHTML(seleccion);
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <button type="button" class="seleccion-chip${seleccion === SELECCION_PRINCIPAL ? " seleccion-chip--principal" : ""}"
+              data-ir-seleccion="${nombre}" aria-label="Ver productos de ${nombre}">
+        ${nombre}
+        <small>${plural(cantidad, "producto", "productos")}</small>
+      </button>`;
+    return li;
+  });
+  $("#lista-selecciones").replaceChildren(...elementos);
+}
+
+function mostrarTestimonios() {
+  const contenedor = $("#lista-testimonios");
+  const hayTestimonios = testimonios.length > 0;
+  contenedor.hidden = !hayTestimonios;
+  $("#testimonios-vacio").hidden = hayTestimonios;
+  if (!hayTestimonios) return;
+
+  contenedor.replaceChildren(...testimonios.map((testimonio) => {
+    const figura = document.createElement("figure");
+    figura.className = "testimonio";
+    figura.innerHTML = `
+      <blockquote>${escaparHTML(testimonio.texto)}</blockquote>
+      <figcaption><strong>${escaparHTML(testimonio.nombre)}</strong>${testimonio.ciudad ? ` · ${escaparHTML(testimonio.ciudad)}` : ""}</figcaption>`;
+    return figura;
+  }));
+}
+
+/* ==========================================================
+   AGREGAR AL CARRITO
+   ========================================================== */
+function agregarAlCarrito(id, talla) {
+  const producto = buscarProducto(id);
+  if (!producto) return;
+
+  const tallaFinal = producto.tipo === "camiseta" ? talla : TALLA_UNICA;
+  const existente = carrito.find((item) => item.id === id && item.talla === tallaFinal);
+
+  if (existente) {
+    existente.cantidad += 1;
+  } else {
+    carrito.push({ id, talla: tallaFinal, cantidad: 1 });
+  }
+
+  actualizarCarrito(true);
+  mostrarToast(`✔ ${producto.nombre} (talla ${tallaFinal}) agregado al carrito`);
+}
+
+/* ==========================================================
+   CAMBIAR CANTIDAD / ELIMINAR
+   ========================================================== */
+function cambiarCantidad(indice, cambio) {
+  const item = carrito[indice];
+  if (!item) return;
+  const producto = buscarProducto(item.id);
+
+  item.cantidad += cambio;
+  if (item.cantidad <= 0) {
+    carrito.splice(indice, 1);
+    anunciar(`${producto.nombre} eliminado del carrito`);
+  } else {
+    anunciar(`${producto.nombre}: ${plural(item.cantidad, "unidad", "unidades")}`);
+  }
+  actualizarCarrito();
+}
+
+function eliminarDelCarrito(indice) {
+  const item = carrito[indice];
+  if (!item) return;
+  carrito.splice(indice, 1);
+  anunciar(`${buscarProducto(item.id).nombre} eliminado del carrito`);
+  actualizarCarrito();
+}
+
+/* Maneja los botones +, − y Eliminar del panel, y devuelve el foco
+   a un lugar lógico para quien navega con teclado. */
+function manejarAccionCarrito(boton) {
+  const indice = Number(boton.dataset.indice);
+  const accion = boton.dataset.accion;
+
+  if (accion === "sumar") cambiarCantidad(indice, 1);
+  else if (accion === "restar") cambiarCantidad(indice, -1);
+  else if (accion === "eliminar") eliminarDelCarrito(indice);
+
+  const siguiente = $(`[data-accion="${accion}"][data-indice="${indice}"]`, $("#carrito-items"));
+  (siguiente || $("#cerrar-carrito")).focus();
+}
+
+/* ==========================================================
+   ACTUALIZAR CARRITO
+   ========================================================== */
+function contarUnidades() {
+  return carrito.reduce((total, item) => total + item.cantidad, 0);
+}
+
+function calcularTotal() {
+  return carrito.reduce((total, item) => total + buscarProducto(item.id).precio * item.cantidad, 0);
+}
+
+function crearItemCarrito(item, indice) {
+  const producto = buscarProducto(item.id);
+  const nombre = escaparHTML(producto.nombre);
+  const talla = escaparHTML(item.talla);
+
+  const li = document.createElement("li");
+  li.className = "item";
+  li.innerHTML = `
+    <div class="item__media" aria-hidden="true">${iconoProducto(producto.tipo)}</div>
+    <div class="item__info">
+      <p class="item__nombre">${nombre}</p>
+      <p class="item__detalle">Talla: ${talla} · ${formatearPrecio(producto.precio)} c/u</p>
+      <div class="item__fila">
+        <div class="cantidad" role="group" aria-label="Cantidad de ${nombre}, talla ${talla}">
+          <button type="button" data-accion="restar" data-indice="${indice}" aria-label="Quitar una unidad de ${nombre}">−</button>
+          <span class="cantidad__valor">${item.cantidad}</span>
+          <button type="button" data-accion="sumar" data-indice="${indice}" aria-label="Agregar una unidad de ${nombre}">+</button>
+        </div>
+        <span class="item__subtotal">${formatearPrecio(producto.precio * item.cantidad)}</span>
+      </div>
+      <button type="button" class="item__eliminar" data-accion="eliminar" data-indice="${indice}" aria-label="Eliminar ${nombre} talla ${talla} del carrito">Eliminar</button>
+    </div>`;
+
+  if (producto.imagen) {
+    const media = $(".item__media", li);
+    const img = crearImagen(producto.imagen, "");
+    img.width = 68;
+    img.height = 68;
+    img.addEventListener("load", () => { media.textContent = ""; media.append(img); });
+  }
+  return li;
+}
+
+function actualizarCarrito(animarContador = false) {
+  guardarCarrito();
+
+  const vacio = carrito.length === 0;
+  const lista = $("#carrito-items");
+  lista.replaceChildren(...carrito.map(crearItemCarrito));
+  lista.hidden = vacio;
+  $("#carrito-vacio").hidden = !vacio;
+
+  const total = calcularTotal();
+  $("#carrito-subtotal").textContent = formatearPrecio(total);
+  $("#carrito-total").textContent = formatearPrecio(total);
+  $("#btn-finalizar").disabled = vacio;
+  $("#btn-vaciar").disabled = vacio;
+
+  actualizarContador(animarContador);
+}
+
+/* ==========================================================
+   CONTADOR DEL CARRITO
+   ========================================================== */
+function actualizarContador(animar = false) {
+  const unidades = contarUnidades();
+  const contador = $("#contador-carrito");
+
+  contador.textContent = unidades > 99 ? "99+" : unidades;
+  contador.classList.toggle("carrito-btn__contador--vacio", unidades === 0);
+  $("#abrir-carrito").setAttribute("aria-label", `Abrir carrito, ${plural(unidades, "unidad", "unidades")}`);
+  $("#carrito-unidades").textContent = `(${unidades})`;
+
+  if (animar) {
+    contador.classList.remove("contador--pulso");
+    void contador.offsetWidth; /* reinicia la animación */
+    contador.classList.add("contador--pulso");
+  }
+}
+
+/* ==========================================================
+   VACIAR CARRITO
+   ========================================================== */
+function vaciarCarrito() {
+  if (carrito.length === 0) return;
+  const confirmado = window.confirm("¿Seguro que quieres vaciar el carrito? Se eliminarán todos los productos.");
+  if (!confirmado) return;
+
+  carrito = [];
+  actualizarCarrito();
+  mostrarToast("Carrito vacío. ¡Vuelve cuando quieras!");
+  $("#cerrar-carrito").focus();
+}
+
+/* ==========================================================
+   FINALIZAR COMPRA (simulada)
+   ========================================================== */
+function finalizarCompra() {
+  if (carrito.length === 0) {
+    mostrarToast("Tu carrito está vacío");
+    return;
+  }
+
+  const lineas = carrito.map((item) => {
+    const producto = buscarProducto(item.id);
+    return `<li>
+      <span>${item.cantidad} × ${escaparHTML(producto.nombre)} <small>(Talla ${escaparHTML(item.talla)})</small></span>
+      <strong>${formatearPrecio(producto.precio * item.cantidad)}</strong>
+    </li>`;
+  }).join("");
+
+  abrirModal(`
+    <h2 class="modal__titulo" id="modal-titulo" tabindex="-1">Resumen de tu pedido</h2>
+    <p class="modal__texto">Revisa que todo esté bien antes de confirmar.</p>
+    <ul class="resumen">${lineas}</ul>
+    <p class="carrito__linea"><span>Envío en Bogotá</span><strong class="envio-gratis">Gratis</strong></p>
+    <p class="carrito__linea carrito__linea--total"><span>Total a pagar</span><strong>${formatearPrecio(calcularTotal())}</strong></p>
+    <div class="modal__botones">
+      <button type="button" class="btn btn--fantasma" data-cerrar-modal>Seguir comprando</button>
+      <button type="button" class="btn btn--rojo" data-confirmar-compra>Confirmar compra</button>
+    </div>`);
+}
+
+function confirmarCompra() {
+  const total = calcularTotal();
+  const unidades = contarUnidades();
+  const numeroPedido = `HS-${Date.now().toString().slice(-6)}`;
+
+  carrito = [];
+  actualizarCarrito();
+  cerrarCarrito(false);
+
+  abrirModal(`
+    <p class="modal__icono" aria-hidden="true">🎉</p>
+    <h2 class="modal__titulo" id="modal-titulo" tabindex="-1">¡Pedido confirmado!</h2>
+    <p>Tu número de pedido es <span class="pedido-numero">${numeroPedido}</span>.</p>
+    <p>Compraste ${plural(unidades, "producto", "productos")} por un total de <strong>${formatearPrecio(total)}</strong>, con envío gratis en Bogotá.</p>
+    <p class="modal__texto"><small>Esta es una compra de demostración: no se realizó ningún cobro.</small></p>
+    <div class="modal__botones">
+      <button type="button" class="btn btn--azul" data-cerrar-modal>Volver a la tienda</button>
+    </div>`);
+}
+
+/* ==========================================================
+   PANEL DEL CARRITO (abrir / cerrar)
+   ========================================================== */
+function carritoAbierto() {
+  return $("#carrito").classList.contains("abierto");
+}
+
+function modalAbierto() {
+  return $("#modal-compra").classList.contains("abierto");
+}
+
+function actualizarBloqueoScroll() {
+  document.body.classList.toggle("sin-scroll", carritoAbierto() || modalAbierto());
+}
+
+function abrirCarrito() {
+  const panel = $("#carrito");
+  cerrarMenu();
+  panel.classList.add("abierto");
+  panel.removeAttribute("inert");
+  panel.setAttribute("aria-hidden", "false");
+  $("#overlay").classList.add("visible");
+  $("#abrir-carrito").setAttribute("aria-expanded", "true");
+  actualizarBloqueoScroll();
+  $("#cerrar-carrito").focus();
+}
+
+function cerrarCarrito(devolverFoco = true) {
+  const panel = $("#carrito");
+  if (!carritoAbierto()) return;
+  panel.classList.remove("abierto");
+  panel.setAttribute("inert", "");
+  panel.setAttribute("aria-hidden", "true");
+  $("#overlay").classList.remove("visible");
+  $("#abrir-carrito").setAttribute("aria-expanded", "false");
+  actualizarBloqueoScroll();
+  if (devolverFoco) $("#abrir-carrito").focus();
+}
+
+/* ==========================================================
+   MODAL
+   ========================================================== */
+function abrirModal(contenidoHTML) {
+  const modal = $("#modal-compra");
+  $("#modal-contenido").innerHTML = contenidoHTML;
+  modal.classList.add("abierto");
+  modal.removeAttribute("inert");
+  modal.setAttribute("aria-hidden", "false");
+  actualizarBloqueoScroll();
+  $("#modal-titulo").focus();
+}
+
+function cerrarModal() {
+  const modal = $("#modal-compra");
+  if (!modalAbierto()) return;
+  modal.classList.remove("abierto");
+  modal.setAttribute("inert", "");
+  modal.setAttribute("aria-hidden", "true");
+  actualizarBloqueoScroll();
+  (carritoAbierto() ? $("#btn-finalizar") : $("#abrir-carrito")).focus();
+}
+
+/* Mantiene el foco del teclado dentro del panel o del modal abierto. */
+function atraparFoco(evento, contenedor) {
+  const enfocables = $$('a[href], button:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])', contenedor)
+    .filter((el) => el.getClientRects().length > 0);
+  if (enfocables.length === 0) return;
+
+  const primero = enfocables[0];
+  const ultimo = enfocables[enfocables.length - 1];
+
+  if (!contenedor.contains(document.activeElement)) {
+    evento.preventDefault();
+    primero.focus();
+  } else if (evento.shiftKey && (document.activeElement === primero || !enfocables.includes(document.activeElement))) {
+    evento.preventDefault();
+    ultimo.focus();
+  } else if (!evento.shiftKey && document.activeElement === ultimo) {
+    evento.preventDefault();
+    primero.focus();
+  }
+}
+
+/* ==========================================================
+   MENÚ (hamburguesa en celulares)
+   ========================================================== */
+function abrirMenu() {
+  $("#menu-principal").classList.add("abierto");
+  $("#menu-btn").setAttribute("aria-expanded", "true");
+  $("#menu-btn").setAttribute("aria-label", "Cerrar menú");
+}
+
+function cerrarMenu() {
+  $("#menu-principal").classList.remove("abierto");
+  $("#menu-btn").setAttribute("aria-expanded", "false");
+  $("#menu-btn").setAttribute("aria-label", "Abrir menú");
+}
+
+function menuAbierto() {
+  return $("#menu-principal").classList.contains("abierto");
+}
+
+/* Marca en el menú la sección que se está viendo. */
+function iniciarNavActiva() {
+  if (!("IntersectionObserver" in window)) return;
+  const enlaces = $$(".nav__link");
+
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (!entrada.isIntersecting) return;
+      enlaces.forEach((enlace) => {
+        const activo = enlace.getAttribute("href") === `#${entrada.target.id}`;
+        enlace.classList.toggle("activo", activo);
+        if (activo) enlace.setAttribute("aria-current", "true");
+        else enlace.removeAttribute("aria-current");
+      });
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+
+  enlaces.forEach((enlace) => {
+    const seccion = document.querySelector(enlace.getAttribute("href"));
+    if (seccion) observador.observe(seccion);
+  });
+}
+
+/* ==========================================================
+   AVISOS (toast y lector de pantalla)
+   ========================================================== */
+let temporizadorToast;
+
+function mostrarToast(mensaje) {
+  const toast = $("#toast");
+  toast.textContent = mensaje;
+  toast.classList.add("visible");
+  clearTimeout(temporizadorToast);
+  temporizadorToast = setTimeout(() => toast.classList.remove("visible"), 2600);
+}
+
+function anunciar(mensaje) {
+  const region = $("#anuncio");
+  region.textContent = "";
+  setTimeout(() => { region.textContent = mensaje; }, 50);
+}
+
+/* ==========================================================
+   ACORDEÓN DE PREGUNTAS FRECUENTES
+   ========================================================== */
+function iniciarAcordeon() {
+  $$(".faq__boton").forEach((boton) => {
+    boton.addEventListener("click", () => {
+      const abierto = boton.getAttribute("aria-expanded") === "true";
+      boton.setAttribute("aria-expanded", String(!abierto));
+      document.getElementById(boton.getAttribute("aria-controls")).hidden = abierto;
+    });
+  });
+}
+
+/* ==========================================================
+   IMAGEN DEL HERO
+   Se toma del atributo data-imagen en index.html.
+   ========================================================== */
+function cargarImagenHero() {
+  const media = $("#hero-media");
+  const src = (media.dataset.imagen || "").trim();
+  if (!src) return;
+
+  const img = crearImagen(src, media.dataset.alt || "");
+  img.loading = "eager";
+  img.fetchPriority = "high";
+  img.width = 1200;
+  img.height = 900;
+  media.append(img);
+}
+
+/* ==========================================================
+   ANIMACIONES SUAVES AL HACER SCROLL
+   Solo se animan los elementos que aún no están en pantalla.
+   ========================================================== */
+function iniciarAnimaciones() {
+  if (prefiereMenosMovimiento || !("IntersectionObserver" in window)) return;
+
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add("visible");
+        observador.unobserve(entrada.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  $$(".seccion__cabecera, .beneficio, .promo__caja, .seleccion-chip, .calidad__item, .tabla-contenedor, .tallas__ayuda, .faq__item")
+    .forEach((elemento) => {
+      if (elemento.getBoundingClientRect().top > window.innerHeight) {
+        elemento.classList.add("revelar");
+        observador.observe(elemento);
+      }
+    });
+}
+
+/* ==========================================================
+   EVENTOS
+   Un solo "escuchador" de clics maneja todos los botones,
+   incluidos los que se crean después (tarjetas, carrito, modal).
+   ========================================================== */
+function registrarEventos() {
+  document.addEventListener("click", (evento) => {
+    const objetivo = evento.target;
+
+    const botonAgregar = objetivo.closest("[data-agregar]");
+    if (botonAgregar) {
+      const selectTalla = $("[data-talla]", botonAgregar.closest(".tarjeta"));
+      agregarAlCarrito(botonAgregar.dataset.agregar, selectTalla ? selectTalla.value : TALLA_UNICA);
+      return;
+    }
+
+    const botonFiltro = objetivo.closest("[data-filtro-tipo]");
+    if (botonFiltro) {
+      aplicarFiltros({ tipo: botonFiltro.dataset.filtroTipo });
+      return;
+    }
+
+    const botonTipo = objetivo.closest("[data-ir-tipo]");
+    if (botonTipo) {
+      irAlCatalogo({ tipo: botonTipo.dataset.irTipo, seleccion: "todas" });
+      return;
+    }
+
+    const botonSeleccion = objetivo.closest("[data-ir-seleccion]");
+    if (botonSeleccion) {
+      irAlCatalogo({ tipo: "todos", seleccion: botonSeleccion.dataset.irSeleccion });
+      return;
+    }
+
+    if (objetivo.closest("[data-limpiar-filtros]")) {
+      aplicarFiltros({ tipo: "todos", seleccion: "todas" });
+      return;
+    }
+
+    const botonCarrito = objetivo.closest("[data-accion]");
+    if (botonCarrito) {
+      manejarAccionCarrito(botonCarrito);
+      return;
+    }
+
+    if (objetivo.closest("[data-confirmar-compra]")) {
+      confirmarCompra();
+      return;
+    }
+
+    if (objetivo.closest("[data-cerrar-modal]")) {
+      cerrarModal();
+      return;
+    }
+
+    /* Cerrar el menú del celular al tocar fuera del header */
+    if (menuAbierto() && !objetivo.closest(".header")) cerrarMenu();
+  });
+
+  $("#filtro-seleccion").addEventListener("change", (evento) => {
+    aplicarFiltros({ seleccion: evento.target.value });
+  });
+
+  /* Menú */
+  $("#menu-btn").addEventListener("click", () => (menuAbierto() ? cerrarMenu() : abrirMenu()));
+  $$("#menu-principal a").forEach((enlace) => enlace.addEventListener("click", cerrarMenu));
+  window.matchMedia("(min-width: 960px)").addEventListener("change", cerrarMenu);
+
+  /* Carrito */
+  $("#abrir-carrito").addEventListener("click", abrirCarrito);
+  $("#cerrar-carrito").addEventListener("click", () => cerrarCarrito());
+  $("#overlay").addEventListener("click", () => cerrarCarrito());
+  $("#carrito-ir-catalogo").addEventListener("click", () => cerrarCarrito(false));
+  $("#btn-vaciar").addEventListener("click", vaciarCarrito);
+  $("#btn-finalizar").addEventListener("click", finalizarCompra);
+
+  /* Teclado: Escape cierra y Tab no se escapa del panel o modal abierto */
+  document.addEventListener("keydown", (evento) => {
+    if (evento.key === "Escape") {
+      if (modalAbierto()) cerrarModal();
+      else if (carritoAbierto()) cerrarCarrito();
+      else if (menuAbierto()) { cerrarMenu(); $("#menu-btn").focus(); }
+    } else if (evento.key === "Tab") {
+      if (modalAbierto()) atraparFoco(evento, $(".modal__caja"));
+      else if (carritoAbierto()) atraparFoco(evento, $("#carrito"));
+    }
+  });
+
+  /* Sombra del header al bajar */
+  const header = $("#header");
+  const revisarScroll = () => header.classList.toggle("header--scroll", window.scrollY > 8);
+  window.addEventListener("scroll", revisarScroll, { passive: true });
+  revisarScroll();
+}
+
+/* ==========================================================
+   INICIAR TIENDA
+   ========================================================== */
+function iniciarTienda() {
+  llenarFiltroSelecciones();
+  mostrarSelecciones();
+  mostrarDestacados();
+  mostrarProductos();
+  mostrarTestimonios();
+  actualizarCarrito();
+  cargarImagenHero();
+  registrarEventos();
+  iniciarAcordeon();
+  iniciarNavActiva();
+  iniciarAnimaciones();
+  $("#anio").textContent = new Date().getFullYear();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", iniciarTienda);
+} else {
+  iniciarTienda();
+}
+</script>
+</body>
+</html>
